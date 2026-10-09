@@ -1,0 +1,61 @@
+.borrower-field {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+
+.borrower-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  align-items: center;
+  justify-content: start;
+  column-gap: 20px;
+  row-gap: 6px;
+}
+
+.borrower-field__label {
+  color: #4b5563;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.borrower-field__value {
+  padding: 4px 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .borrower-card {
+    align-items: center;
+  }
+
+  .borrower-info-grid {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+@media (max-width: 600px) {
+  .borrower-card {
+    flex-wrap: wrap;
+  }
+
+  .borrower-info-grid {
+    grid-template-columns: max-content;
+  }
+
+  .borrower-card__actions {
+    margin-left: auto;
+  }
+}

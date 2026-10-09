@@ -1,0 +1,465 @@
+{
+  "app": "Sistema de Empréstimo de Equipamentos",
+  "version": "1.0.0",
+  "exportedAt": "2026-08-19T19:21:30.299Z",
+  "equipmentData": {
+    "notebooks": [
+      {
+        "id": 1,
+        "name": "Notebook 01",
+        "status": "occupied",
+        "loanedTo": "Lucas Stradiotto",
+        "loanedByType": "colaborador",
+        "activity": "atualização",
+        "loanDate": "2026-08-19T15:52:18.977Z"
+      },
+      {
+        "id": 2,
+        "name": "Notebook 02",
+        "status": "maintenance",
+        "maintenanceStatus": "movido para manutenção",
+        "movedToMaintenanceAt": "2026-08-19T15:52:27.687Z",
+        "movedToMaintenanceFromStatus": "available",
+        "maintenanceObservation": "Item foi movido para manutenção."
+      },
+      {
+        "id": 3,
+        "name": "Notebook 03",
+        "status": "maintenance",
+        "loanedTo": "Lucas Stradiotto",
+        "loanedByType": "colaborador",
+        "activity": "restauração",
+        "loanDate": "2026-08-19T15:54:12.969Z",
+        "maintenanceStatus": "movido para manutenção",
+        "movedToMaintenanceAt": "2026-08-19T15:54:20.332Z",
+        "movedToMaintenanceFromStatus": "occupied",
+        "maintenanceObservation": "Item estava emprestado e foi movido para manutenção."
+      },
+      {
+        "id": 4,
+        "name": "Notebook 04",
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Notebook 05",
+        "status": "available"
+      },
+      {
+        "id": 6,
+        "name": "Notebook 06",
+        "status": "available"
+      },
+      {
+        "id": 7,
+        "name": "Notebook 07",
+        "status": "available"
+      },
+      {
+        "id": 8,
+        "name": "Notebook 08",
+        "status": "available"
+      },
+      {
+        "id": 9,
+        "name": "Notebook 09",
+        "status": "available"
+      },
+      {
+        "id": 10,
+        "name": "Notebook 10",
+        "status": "available"
+      },
+      {
+        "id": 11,
+        "name": "Notebook 11",
+        "status": "available"
+      },
+      {
+        "id": 12,
+        "name": "Notebook 12",
+        "status": "available"
+      },
+      {
+        "id": 13,
+        "name": "Notebook 13",
+        "status": "available"
+      },
+      {
+        "id": 14,
+        "name": "Notebook 14",
+        "status": "available"
+      },
+      {
+        "id": 15,
+        "name": "Notebook 15",
+        "status": "available"
+      },
+      {
+        "id": 16,
+        "name": "Notebook 16",
+        "status": "available"
+      },
+      {
+        "id": 17,
+        "name": "Notebook 17",
+        "status": "available"
+      },
+      {
+        "id": 18,
+        "name": "Notebook 18",
+        "status": "available"
+      },
+      {
+        "id": 19,
+        "name": "Notebook 19",
+        "status": "available"
+      },
+      {
+        "id": 20,
+        "name": "Notebook 20",
+        "status": "available"
+      },
+      {
+        "id": 21,
+        "name": "Notebook 21",
+        "status": "available"
+      },
+      {
+        "id": 22,
+        "name": "Notebook 22",
+        "status": "available"
+      },
+      {
+        "id": 23,
+        "name": "Notebook 23",
+        "status": "available"
+      },
+      {
+        "id": 24,
+        "name": "Notebook 24",
+        "status": "available"
+      },
+      {
+        "id": 25,
+        "name": "Notebook 25",
+        "status": "available"
+      },
+      {
+        "id": 26,
+        "name": "Notebook 26",
+        "status": "available"
+      },
+      {
+        "id": 27,
+        "name": "Notebook 27",
+        "status": "available"
+      },
+      {
+        "id": 28,
+        "name": "Notebook 28",
+        "status": "available"
+      },
+      {
+        "id": 29,
+        "name": "Notebook 29",
+        "status": "available"
+      },
+      {
+        "id": 30,
+        "name": "Notebook 30",
+        "status": "available"
+      }
+    ],
+    "celulares": [
+      {
+        "id": 1,
+        "name": "Celular 01",
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Celular 02",
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Celular 03",
+        "status": "available"
+      },
+      {
+        "id": 4,
+        "name": "Celular 04",
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Celular 05",
+        "status": "available"
+      },
+      {
+        "id": 6,
+        "name": "Celular 06",
+        "status": "available"
+      },
+      {
+        "id": 7,
+        "name": "Celular 07",
+        "status": "available"
+      },
+      {
+        "id": 8,
+        "name": "Celular 08",
+        "status": "available"
+      },
+      {
+        "id": 9,
+        "name": "Celular 09",
+        "status": "available"
+      },
+      {
+        "id": 10,
+        "name": "Celular 10",
+        "status": "available"
+      },
+      {
+        "id": 11,
+        "name": "Celular 11",
+        "status": "available"
+      },
+      {
+        "id": 12,
+        "name": "Celular 12",
+        "status": "available"
+      },
+      {
+        "id": 13,
+        "name": "Celular 13",
+        "status": "available"
+      },
+      {
+        "id": 14,
+        "name": "Celular 14",
+        "status": "available"
+      },
+      {
+        "id": 15,
+        "name": "Celular 15",
+        "status": "available"
+      },
+      {
+        "id": 16,
+        "name": "Celular 16",
+        "status": "available"
+      }
+    ],
+    "cameras": [
+      {
+        "id": 1,
+        "name": "Câmera 01",
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Câmera 02",
+        "status": "available"
+      }
+    ],
+    "caixasDeSom": [
+      {
+        "id": 1,
+        "name": "Caixa de Som 01",
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Caixa de Som 02",
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Caixa de Som 03",
+        "status": "available"
+      },
+      {
+        "id": 4,
+        "name": "Caixa de Som 04",
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Caixa de Som 05",
+        "status": "available"
+      },
+      {
+        "id": 6,
+        "name": "Caixa de Som 06",
+        "status": "available"
+      },
+      {
+        "id": 7,
+        "name": "Caixa de Som 07",
+        "status": "available"
+      },
+      {
+        "id": 8,
+        "name": "Caixa de Som 08",
+        "status": "available"
+      },
+      {
+        "id": 9,
+        "name": "Caixa de Som 09",
+        "status": "available"
+      },
+      {
+        "id": 10,
+        "name": "Caixa de Som 10",
+        "status": "available"
+      }
+    ],
+    "fonesDeOuvido": [
+      {
+        "id": 1,
+        "name": "Fone de Ouvido 01",
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Fone de Ouvido 02",
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Fone de Ouvido 03",
+        "status": "available"
+      },
+      {
+        "id": 4,
+        "name": "Fone de Ouvido 04",
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Fone de Ouvido 05",
+        "status": "available"
+      },
+      {
+        "id": 6,
+        "name": "Fone de Ouvido 06",
+        "status": "available"
+      },
+      {
+        "id": 7,
+        "name": "Fone de Ouvido 07",
+        "status": "available"
+      },
+      {
+        "id": 8,
+        "name": "Fone de Ouvido 08",
+        "status": "available"
+      },
+      {
+        "id": 9,
+        "name": "Fone de Ouvido 09",
+        "status": "available"
+      },
+      {
+        "id": 10,
+        "name": "Fone de Ouvido 10",
+        "status": "available"
+      },
+      {
+        "id": 11,
+        "name": "Fone de Ouvido 11",
+        "status": "available"
+      },
+      {
+        "id": 12,
+        "name": "Fone de Ouvido 12",
+        "status": "available"
+      },
+      {
+        "id": 13,
+        "name": "Fone de Ouvido 13",
+        "status": "available"
+      },
+      {
+        "id": 14,
+        "name": "Fone de Ouvido 14",
+        "status": "available"
+      },
+      {
+        "id": 15,
+        "name": "Fone de Ouvido 15",
+        "status": "available"
+      },
+      {
+        "id": 16,
+        "name": "Fone de Ouvido 16",
+        "status": "available"
+      },
+      {
+        "id": 17,
+        "name": "Fone de Ouvido 17",
+        "status": "available"
+      },
+      {
+        "id": 18,
+        "name": "Fone de Ouvido 18",
+        "status": "available"
+      },
+      {
+        "id": 19,
+        "name": "Fone de Ouvido 19",
+        "status": "available"
+      },
+      {
+        "id": 20,
+        "name": "Fone de Ouvido 20",
+        "status": "available"
+      }
+    ],
+    "kitsLegoSpike": [
+      {
+        "id": 1,
+        "name": "Kit LEGO SPIKE PRIME 01",
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Kit LEGO SPIKE PRIME 02",
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Kit LEGO SPIKE PRIME 03",
+        "status": "available"
+      },
+      {
+        "id": 4,
+        "name": "Kit LEGO SPIKE PRIME 04",
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Kit LEGO SPIKE PRIME 05",
+        "status": "available"
+      },
+      {
+        "id": 6,
+        "name": "Kit LEGO SPIKE PRIME 06",
+        "status": "available"
+      },
+      {
+        "id": 7,
+        "name": "Kit LEGO SPIKE PRIME 07",
+        "status": "available"
+      },
+      {
+        "id": 8,
+        "name": "Kit LEGO SPIKE PRIME 08",
+        "status": "available"
+      }
+    ]
+  }
+}
