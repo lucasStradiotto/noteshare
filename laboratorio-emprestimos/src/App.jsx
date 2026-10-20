@@ -619,7 +619,69 @@ function App() {
           onImportBackup={handleImportBackup}
         />
       )}
+      <InstallAppButton />
     </>
+  );
+}
+
+function InstallAppButton() {
+  const [installPrompt, setInstallPrompt] = useState(null);
+  const [isInstalled, setIsInstalled] = useState(
+    () => window.matchMedia("(display-mode: standalone)").matches
+  );
+
+  useEffect(() => {
+    const handleInstallAvailable = (event) => {
+      event.preventDefault();
+      setInstallPrompt(event);
+    };
+    const handleInstalled = () => {
+      setIsInstalled(true);
+      setInstallPrompt(null);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleInstallAvailable);
+    window.addEventListener("appinstalled", handleInstalled);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handleInstallAvailable);
+      window.removeEventListener("appinstalled", handleInstalled);
+    };
+  }, []);
+
+  const handleInstall = async () => {
+    if (!installPrompt) {
+      window.alert(
+        "Para instalar, abra o menu do navegador e escolha “Instalar aplicativo” ou “Adicionar à tela inicial”."
+      );
+      return;
+    }
+
+    try {
+      await installPrompt.prompt();
+      const choice = await installPrompt.userChoice;
+      if (choice.outcome === "accepted") {
+        setIsInstalled(true);
+      }
+      setInstallPrompt(null);
+    } catch (error) {
+      console.error("Não foi possível iniciar a instalação do app:", error);
+      window.alert("Não foi possível instalar o app. Tente novamente pelo menu do navegador.");
+    }
+  };
+
+  if (isInstalled || window.desktopApp?.isDesktopApp) {
+    return null;
+  }
+
+  return (
+    <button
+      type="button"
+      className="install-app-button"
+      onClick={handleInstall}
+    >
+      {installPrompt ? "Instalar app" : "Como instalar"}
+    </button>
   );
 }
 

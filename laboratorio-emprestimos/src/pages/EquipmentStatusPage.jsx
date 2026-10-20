@@ -149,7 +149,7 @@ function EquipmentStatusPage({ category, equipmentData, setEquipmentData, onBack
     };
 
     return (
-        <div style={pageStyle}>
+        <div className="equipment-status-page" style={pageStyle}>
             <button onClick={onBack} style={backButtonStyle}>
                 Voltar para o início
             </button>

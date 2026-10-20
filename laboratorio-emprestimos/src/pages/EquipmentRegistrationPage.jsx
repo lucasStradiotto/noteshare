@@ -131,7 +131,7 @@ function EquipmentRegistrationPage({
   };
 
   return (
-    <main style={pageStyle}>
+    <main className="equipment-registration-page" style={pageStyle}>
       <header style={headerStyle}>
         <div>
           <p style={eyebrowStyle}>Sistema de Empréstimo de Equipamentos</p>

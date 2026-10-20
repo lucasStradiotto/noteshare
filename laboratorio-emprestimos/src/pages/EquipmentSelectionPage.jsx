@@ -150,7 +150,7 @@ function EquipmentSelectionPage({
     };
 
     return (
-        <div style={{ padding: "30px", background: "#f3f4f6", minHeight: "100vh" }}>
+        <div className="equipment-selection-page" style={{ padding: "30px", background: "#f3f4f6", minHeight: "100vh" }}>
             <button onClick={onBack} style={backButtonStyle}>
                 Voltar para o início
             </button>

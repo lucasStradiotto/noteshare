@@ -1,0 +1,164 @@
+#root > .dashboard-page,
+#root > .equipment-selection-page,
+#root > .equipment-status-page,
+#root > main {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.dashboard-header {
+  align-items: flex-start;
+}
+
+.dashboard-category-grid {
+  align-items: stretch;
+}
+
+.equipment-card {
+  flex: 1 1 220px;
+  max-width: 280px;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+.equipment-card h1 {
+  margin: 0 0 12px;
+}
+
+.dashboard-page .borrowed-section-title {
+  color: #0f172a !important;
+}
+
+.install-app-button {
+  position: fixed;
+  z-index: 900;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #0f172a;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 24%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.equipment-selection-page table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+@media (max-width: 700px) {
+  #root > .dashboard-page,
+  #root > .equipment-selection-page,
+  #root > .equipment-status-page,
+  #root > main {
+    padding: 20px 16px !important;
+  }
+
+  .dashboard-header {
+    display: grid !important;
+  }
+
+  .dashboard-intro {
+    display: grid !important;
+  }
+
+  .dashboard-backup-area,
+  .dashboard-backup-buttons {
+    width: 100%;
+  }
+
+  .dashboard-backup-buttons {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .equipment-card {
+    flex-basis: calc(50% - 10px);
+    max-width: none;
+    padding: 16px 12px !important;
+  }
+
+  .borrower-card {
+    align-items: stretch !important;
+    flex-wrap: wrap;
+    padding: 14px !important;
+  }
+
+  .borrower-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 10px !important;
+  }
+
+  .borrower-field__value {
+    white-space: normal !important;
+  }
+
+  .borrower-card__actions {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .borrower-card__actions button {
+    flex: 1;
+    min-height: 44px;
+  }
+
+  .equipment-selection-page table {
+    min-width: 640px;
+  }
+
+  .equipment-selection-page button {
+    max-width: 100%;
+  }
+
+  .loan-history-page .daily-loans-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    justify-content: stretch !important;
+  }
+
+  .loan-history-page .loan-history-card {
+    width: 100% !important;
+  }
+
+  .install-app-button {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 420px) {
+  #root > .dashboard-page,
+  #root > .equipment-selection-page,
+  #root > .equipment-status-page,
+  #root > main {
+    padding: 16px 12px !important;
+  }
+
+  .equipment-card {
+    flex-basis: 100%;
+  }
+
+  .dashboard-backup-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .borrower-info-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .equipment-status-page > div[style*="grid-template-columns"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}

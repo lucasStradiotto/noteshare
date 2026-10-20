@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Sistema de Empréstimo de Equipamentos SESI",
+  "short_name": "Empréstimos SESI",
+  "description": "Controle de empréstimos e status dos equipamentos do laboratório.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f4f6",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -83,7 +83,7 @@ function LoanHistoryPage({ usersByType, onBack }) {
   };
 
   return (
-    <main style={pageStyle}>
+    <main className="loan-history-page" style={pageStyle}>
       <header style={headerStyle}>
         <div>
           <p style={eyebrowStyle}>Sistema de Empréstimo de Equipamentos</p>
@@ -172,7 +172,7 @@ function LoanHistoryPage({ usersByType, onBack }) {
                       }}
                     >
                       {dayLoans.length > 0 ? (
-                        <div style={dailyLoansStyle}>
+                        <div className="daily-loans-grid" style={dailyLoansStyle}>
                           {dayLoans.map(({ loan, user }) => (
                             <LoanCard
                               key={`${user.id}-${loan.id}`}
@@ -207,7 +207,7 @@ function LoanCard({ loan, user }) {
   const quantity = loan.quantity ?? loan.equipment?.length ?? 0;
 
   return (
-    <article style={loanCardStyle}>
+    <article className="loan-history-card" style={loanCardStyle}>
       <span aria-hidden="true" style={equipmentIconStyle}>
         {icon}
       </span>

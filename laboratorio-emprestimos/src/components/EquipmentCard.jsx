@@ -1,6 +1,7 @@
 function EquipmentCard({ title, quantity, icon, onClick, onStatusClick }) {
   return (
     <div
+      className="equipment-card"
       onClick={onClick}
       style={{
         border: "1px solid #ddd",

@@ -200,9 +200,9 @@ function Dashboard({
   );
 
   return (
-    <div style={{ padding: "30px" }}>
-      <div style={headerAreaStyle}>
-        <div style={headerIntroStyle}>
+    <div className="dashboard-page" style={{ padding: "30px" }}>
+      <div className="dashboard-header" style={headerAreaStyle}>
+        <div className="dashboard-intro" style={headerIntroStyle}>
           <div>
             <h1>
               Sistema de Empréstimo de Equipamentos
@@ -222,8 +222,8 @@ function Dashboard({
           </button>
         </div>
 
-        <div style={backupAreaStyle}>
-          <div style={backupButtonsStyle}>
+        <div className="dashboard-backup-area" style={backupAreaStyle}>
+        <div className="dashboard-backup-buttons" style={backupButtonsStyle}>
             <button
               type="button"
               onClick={onExportBackup}
@@ -254,6 +254,7 @@ function Dashboard({
       </div>
 
       <div
+        className="dashboard-category-grid"
         style={{
           display: "flex",
           gap: "20px",
@@ -276,7 +277,7 @@ function Dashboard({
       </div>
 
       <section style={borrowedSectionStyle}>
-        <h2 style={borrowedSectionTitleStyle}>
+        <h2 className="borrowed-section-title" style={borrowedSectionTitleStyle}>
           Equipamentos Em Uso
         </h2>
 
@@ -727,7 +728,7 @@ const borrowedSectionStyle = {
 };
 
 const borrowedSectionTitleStyle = {
-  color: "#fff",
+  color: "#0f172a",
   marginBottom: "16px"
 };
 
