@@ -115,15 +115,24 @@ function App() {
     return REQUIRED_CATEGORIES.every((category) => Array.isArray(data[category]));
   };
 
+  const validateUsersData = (data) => {
+    if (!data || typeof data !== "object") {
+      return false;
+    }
+
+    return USER_TYPES.every((type) => Array.isArray(data[type]));
+  };
+
   const handleExportBackup = () => {
     try {
       const now = new Date();
 
       const backupData = {
         app: "Sistema de Empréstimo de Equipamentos",
-        version: "1.0.0",
+        version: "1.0.3",
         exportedAt: now.toISOString(),
-        equipmentData
+        equipmentData,
+        usersByType
       };
 
       const backupContent = JSON.stringify(backupData, null, 2);
@@ -183,7 +192,19 @@ function App() {
           return;
         }
 
+        const importedUsersData = importedBackup.usersByType;
+        if (importedUsersData !== undefined && !validateUsersData(importedUsersData)) {
+          console.error("Dados de usuários inválidos no backup:", importedBackup);
+          alert(
+            "O backup contém dados de usuários inválidos e não pode ser importado."
+          );
+          return;
+        }
+
         setEquipmentData(importedEquipmentData);
+        if (importedUsersData !== undefined) {
+          setUsersByType(importedUsersData);
+        }
 
         alert("Backup importado com sucesso!");
       } catch (error) {

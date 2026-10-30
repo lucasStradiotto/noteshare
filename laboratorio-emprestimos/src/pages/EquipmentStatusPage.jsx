@@ -148,6 +148,37 @@ function EquipmentStatusPage({ category, equipmentData, setEquipmentData, onBack
         handleCloseMaintenanceModal();
     };
 
+    const handleRemoveFromMaintenance = (item) => {
+        const shouldRemove = window.confirm(
+            `Deseja retirar "${item.name}" da manutenção e deixar o equipamento livre?`
+        );
+
+        if (!shouldRemove) {
+            return;
+        }
+
+        const updatedCategoryItems = selectedEquipmentList.map((categoryItem) => {
+            if (categoryItem.id !== item.id) {
+                return categoryItem;
+            }
+
+            const availableItem = { ...categoryItem, status: "available" };
+            [
+                "maintenanceStatus",
+                "movedToMaintenanceAt",
+                "movedToMaintenanceFromStatus",
+                "maintenanceObservation"
+            ].forEach((field) => delete availableItem[field]);
+
+            return availableItem;
+        });
+
+        setEquipmentData((previousEquipmentData) => ({
+            ...previousEquipmentData,
+            [category]: updatedCategoryItems
+        }));
+    };
+
     return (
         <div className="equipment-status-page" style={pageStyle}>
             <button onClick={onBack} style={backButtonStyle}>
@@ -246,25 +277,35 @@ function EquipmentStatusPage({ category, equipmentData, setEquipmentData, onBack
                             )}
 
                             {isMaintenanceStatus(item.status) && (
-                                <div style={detailsBoxStyle}>
-                                    <p>
-                                        Item indisponível para empréstimo.
-                                    </p>
-
-                                    <p>
-                                        Situação: <strong>{item.maintenanceStatus || "em manutenção"}</strong>
-                                    </p>
-
-                                    <p>
-                                        Movido em: <strong>{formatDateTime(item.movedToMaintenanceAt)}</strong>
-                                    </p>
-
-                                    {item.maintenanceObservation && (
+                                <>
+                                    <div style={detailsBoxStyle}>
                                         <p>
-                                            Observação: <strong>{item.maintenanceObservation}</strong>
+                                            Item indisponível para empréstimo.
                                         </p>
-                                    )}
-                                </div>
+
+                                        <p>
+                                            Situação: <strong>{item.maintenanceStatus || "em manutenção"}</strong>
+                                        </p>
+
+                                        <p>
+                                            Movido em: <strong>{formatDateTime(item.movedToMaintenanceAt)}</strong>
+                                        </p>
+
+                                        {item.maintenanceObservation && (
+                                            <p>
+                                                Observação: <strong>{item.maintenanceObservation}</strong>
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        onClick={() => handleRemoveFromMaintenance(item)}
+                                        style={removeMaintenanceButtonStyle}
+                                    >
+                                        Retirar da manutenção
+                                    </button>
+                                </>
                             )}
                             {!isMaintenanceStatus(item.status) && (
                                 <button
@@ -465,6 +506,11 @@ const maintenanceButtonStyle = {
     color: "#fff",
     cursor: "pointer",
     fontWeight: "bold"
+};
+
+const removeMaintenanceButtonStyle = {
+    ...maintenanceButtonStyle,
+    background: "#16a34a"
 };
 
 const overlayStyle = {

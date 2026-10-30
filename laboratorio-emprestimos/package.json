@@ -1,7 +1,7 @@
 {
   "name": "laboratorio-emprestimos",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.3",
   "description": "Aplicativo desktop para controle de empréstimos de equipamentos do laboratório.",
   "type": "module",
   "main": "electron/main.cjs",

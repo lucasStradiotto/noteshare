@@ -35,7 +35,7 @@ npm install
 npm run desktop:dist
 ```
 
-Ao concluir, o instalador será criado na pasta `release`, com o nome `Empréstimo de Equipamentos SESI-Setup-0.0.0.exe`. Execute o arquivo para instalar o aplicativo. O instalador cria atalhos no Menu Iniciar e na Área de Trabalho.
+Ao concluir, o instalador será criado na pasta `release`, com o nome `Empréstimo de Equipamentos SESI-Setup-1.0.3.exe`. Execute o arquivo para instalar o aplicativo. O instalador cria atalhos no Menu Iniciar e na Área de Trabalho.
 
 O Node.js é necessário para gerar o instalador, mas não para usar o aplicativo já instalado. A instalação é por usuário do Windows e permite escolher a pasta de destino.
 
